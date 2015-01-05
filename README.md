@@ -26,12 +26,12 @@ You must supply the list of conditions and your answers. It returns the matched 
 
     EXAMPLE_ANSWERS = [1, 0, 0]
 
-    DecisionTable::parse(EXAMPLE_DECISION_TABLE[:conditions], EXAMPLE_ANSWERS)
+    column = DecisionTable::parse(EXAMPLE_DECISION_TABLE[:conditions], EXAMPLE_ANSWERS)
     # => 1
 
 In this example, the column is 1, therefore: go outside and wear sunglasses ;)
 
-    EXAMPLE_DECISION_TABLE[:actions].each {|x| puts x[0] if x[1][1] == 1 }
+    EXAMPLE_DECISION_TABLE[:actions].each {|x| puts x[0] if x[1][column] == 1 }
     # go outside
     # wear sunglasses
 
