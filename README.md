@@ -37,4 +37,4 @@ In this example, the column is 1, therefore: go outside and wear sunglasses ;)
 
 # License
 
-[Public Domain (Unlicense)](UNLICENSE)
+[MIT License](LICENSE)
