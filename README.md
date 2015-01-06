@@ -6,6 +6,19 @@ A small snippet to parse a decision table
 
 > [Decision tables](https://en.wikipedia.org/wiki/Decision_table) are a precise yet compact way to model complex rule sets and their corresponding actions.
 
+# Example
+
+| What should I do today? | | | | | |
+| :------------------------| :---: | :---: | :---: | :---: | :---: |
+| **Sunny** | 0 | 1 | 0 | 1 | X |
+| **Raining** | 0 | 0 | 1 | 1 | X |
+| **Typhoon** | 0 | 0 | 0 | 0 | 1 |
+| |
+| **Go outside** | 1 | 1 | 1 | 1 |  |
+| **Take umbrella** |  |  | 1 | 1 |  |
+| **Wear sunglasses** |  | 1 |  | 1 |  |
+| **Stay home** |  |  |  |  | 1 |
+
 # Usage
 
 You must supply the list of conditions and your answers. It returns the matched column number.
