@@ -31,7 +31,7 @@ module DecisionTable
       }
     }
 
-    # Loop through each answer and hope to end up with the exact column match
+    # Map/Reduce the answers
     result = answers.each_index.map(&columns).reduce(:&).compact
     result.length == 1 ? result[0] : nil
   end
