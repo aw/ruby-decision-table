@@ -21,18 +21,19 @@
 # SOFTWARE.
 
 module DecisionTable
+  extend self
 
   # Returns the column match, or nil
   def parse(conditions, answers)
     columns = Proc.new {|index|
       # loop through each condition and see if this answer matches
       conditions.values[index].map.each_with_index {|x, i|
-        i if x == answers[index] || x == nil
+        i if x == answers[index] || x.nil?
       }
     }
 
     # Map/Reduce the answers
     result = answers.each_index.map(&columns).reduce(:&).compact
-    result.length == 1 ? result[0] : nil
+    result[0] if result.length == 1
   end
 end
