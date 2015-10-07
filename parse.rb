@@ -21,6 +21,7 @@
 # SOFTWARE.
 
 module DecisionTable
+  extend self
 
   # Returns the column match, or nil
   def parse(conditions, answers)
